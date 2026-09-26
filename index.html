@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="اتحاد طلاب مدارس الدقهلية - معًا نصنع وعيًا يليق بالغد">
+    <meta name="keywords" content="اتحاد طلاب, الدقهلية, التعليم, قادة المستقبل">
+    <meta name="author" content="اتحاد طلاب مدارس الدقهلية">
+    <title>اتحاد طلاب مدارس الدقهلية | معًا نصنع وعيًا يليق بالغد</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+    <div class="logo">
+        <span class="logo-main">اتحاد طلاب</span>
+        <span class="logo-sub">الدقهلية</span>
+    </div>
+    <div class="mobile-menu" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+    </div>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#home">الرئيسية</a></li>
+        <li><a href="#about">عنّا</a></li>
+        <li><a href="#initiatives">المبادرات</a></li>
+        <li><a href="#journey">رحلتنا</a></li>
+        <li><a href="#impact">الأثر</a></li>
+        <li><a href="#partners">شركاء النجاح</a></li>
+        <li><a href="pages/ai-model.html">AI MODEL</a></li>
+    </ul>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <canvas id="bg-canvas"></canvas>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <div class="hero-text" data-aos="fade-right">
+            <h1 class="hero-title" id="animatedTitle"></h1>
+            <p class="hero-subtitle">نصنع القادة، نبني المستقبل</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="scrollToSection('about')">اكتشف المزيد</button>
+                <button class="btn-outline" onclick="scrollToSection('initiatives')">مبادراتنا</button>
+            </div>
+        </div>
+        <div class="hero-slider" data-aos="fade-left">
+            <div class="slider-container" id="slider">
+                <div class="slider-item active">
+                    <img src="عمو عادل والرياضة.jpg" alt="Student activity">
+                    <div class="slider-caption">فعاليات طلابية مميزة</div>
+                </div>
+                <div class="slider-item">
+                    <img src="مسلك.jpg" alt="Educational event">
+                    <div class="slider-caption">ورش تعليمية متطورة</div>
+                </div>
+                <div class="slider-item">
+                    <img src="الاليط.jpg" alt="Leadership conference">
+                    <div class="slider-caption">مؤتمرات قيادية</div>
+                </div>
+                <div class="slider-item">
+                    <img src="https://picsum.photos/600/400?random=4" alt="Community service">
+                    <div class="slider-caption">خدمة مجتمعية</div>
+                </div>
+            </div>
+            <div class="slider-dots" id="sliderDots"></div>
+        </div>
+    </div>
+    <div class="scroll-indicator" onclick="scrollToNext()">
+        <i class="fas fa-chevron-down"></i>
+        <span>تمرير</span>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">عن الاتحاد</h2>
+        <div class="about-grid">
+            <div class="about-card" data-aos="flip-right">
+                <div class="card-icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <h3>مهمتنا</h3>
+                <p>تمكين الطلاب وتنمية مهاراتهم القيادية لبناء مجتمع مدرسي واعٍ ومتقدم، وتأهيل جيل قادر على مواجهة تحديات المستقبل</p>
+            </div>
+            <div class="about-card" data-aos="flip-right" data-aos-delay="100">
+                <div class="card-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h3>رؤيتنا</h3>
+                <p>أن نكون النموذج الرائد للاتحادات الطلابية على مستوى الجمهورية، ونحقق نقلة نوعية في العمل الطلابي المصري</p>
+            </div>
+            <div class="about-card" data-aos="flip-right" data-aos-delay="200">
+                <div class="card-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>أهدافنا</h3>
+                <p>تطوير العمل الطلابي، تعزيز الانتماء والمواطنة، بناء قادة الغد المؤثرين، ونشر الوعي بين جميع الفئات</p>
+            </div>
+        </div>
+        
+        <!-- Social Media Hub -->
+        <div class="social-hub" data-aos="zoom-in">
+            <h3>تابعونا على وسائل التواصل</h3>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Initiatives Section -->
+<section id="initiatives">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">مبادراتنا</h2>
+        <div class="initiatives-grid" id="initiativesGrid"></div>
+    </div>
+</section>
+
+<!-- Journey Section - Zigzag Timeline -->
+<section id="journey">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">رحلتنا</h2>
+        <div class="zigzag-timeline" id="zigzagTimeline"></div>
+    </div>
+</section>
+
+<!-- Impact Section -->
+<section id="impact">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">أثرنا في الأرقام</h2>
+        <div class="impact-grid" id="impactGrid"></div>
+        
+        <!-- Success Stories -->
+        <div class="success-stories" data-aos="fade-up">
+            <h3>قصص نجاح ملهمة</h3>
+            <div class="stories-carousel" id="storiesCarousel"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Partners Section -->
+<section id="partners">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">شركاء النجاح</h2>
+        <div class="partners-container">
+            <div class="partners-category">
+                <h3>المؤسسات الشريكة</h3>
+                <div class="logo-slider">
+                    <div class="logo-track" id="institutionLogos"></div>
+                </div>
+            </div>
+            <div class="partners-category">
+                <h3>طلاب متميزون</h3>
+                <div class="students-grid" id="studentsGrid"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-info">
+            <h3>اتحاد طلاب مدارس الدقهلية</h3>
+            <p>معًا نصنع وعيًا يليق بالغد</p>
+        </div>
+        <div class="footer-links">
+            <a href="#home">الرئيسية</a>
+            <a href="#about">عنّا</a>
+            <a href="#initiatives">المبادرات</a>
+            <a href="#journey">رحلتنا</a>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2024 اتحاد طلاب مدارس الدقهلية - جميع الحقوق محفوظة</p>
+        </div>
+    </div>
+</footer>
+
+<!-- JavaScript Files -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="main.js"></script>
+<script src="initiatives.js"></script>
+<script src="timeline.js"></script>
+</body>
+</html>
